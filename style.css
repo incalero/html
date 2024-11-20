@@ -1,0 +1,192 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    width: 100%;
+  }
+  
+  .navbar .logo img {
+    height: 30px;
+    margin-left: 20px;
+  }
+  
+  .navbar nav {
+    display: flex;  /* Asegura que los elementos de navegación estén en línea */
+    gap: 20px; /* Espaciado constante entre los elementos de la lista */
+    margin-left: 20px; /* Margen que separa el logo de la navegación */
+  }
+
+  .navbar nav ul li a.spark {
+    font-weight:100; /* Asegura que "Spark" no esté en negrita */
+  }
+
+  .navbar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Alinea los elementos de la lista en línea */
+}
+  
+  .navbar nav ul li {
+    margin: 0 20px;
+  }
+  
+  .navbar nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .auth-buttons a {
+    margin-left: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .auth-buttons a.create-btn {
+    background-color: #0f0;
+  }
+  
+  .auth-buttons a.signup-btn {
+    background-color: #007BFF;
+  }
+  
+  /* Main Landing Section */
+  .landing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+  }
+  
+  .content {
+    max-width: 50%;
+  }
+  
+  .content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .content h1 .highlight {
+    color: #4caf50;
+  }
+  
+  .content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .buttons .signup {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .buttons .signup:hover {
+    background-color: #388e3c;
+  }
+  
+  .buttons .learn-more {
+    background-color: transparent;
+    color: #4caf50;
+    padding: 10px 20px;
+    border: 2px solid #4caf50;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .buttons .learn-more:hover {
+    background-color: #e8f5e9;
+    color: #000;
+  }
+
+/* Contenedor de la imagen */
+.image-container {
+  position: relative;  /* Esto es necesario para que el texto se posicione relativo a este contenedor */
+  display: inline-block;
+  float: right; /* Alinea el contenedor de la imagen a la derecha */
+  width: 40%; /* Ajusta el tamaño del contenedor según lo necesites */
+  margin-left: 20px; /* Un pequeño margen a la izquierda para separar de otros elementos */
+  margin-top: 60px;  /* Ajuste para bajar el contenedor hacia abajo */
+}
+
+/* Imagen */
+.image-container img {
+  width: 100%;  /* Ajusta la imagen al tamaño del contenedor */
+  height: auto; /* Mantiene la relación de aspecto */
+  border-radius: 5px;
+  margin-top: 40px;
+  box-shadow: -5px 15px 15px rgba(0, 0, 0, 0.5); /* Sombra paralela abajo a la izquierda */
+}
+
+/* Texto encima de la imagen */
+.overlay-text {
+  position: absolute; /* Posiciona el texto sobre la imagen */
+  top: 0; /* Ajusta la distancia desde la parte superior de la imagen */
+  left:10px; /* Alinea el texto a la derecha */
+  color: white; /* Color del texto */
+  font-size: 20px; /* Tamaño del texto */
+  font-weight: bold; /* Negrita para el texto */
+  text-align: left; /* Alinea el texto a la derecha */
+  padding: -10px; /* Espaciado alrededor del texto */
+  background-color: transparent;
+  color: white /* Fondo transparente */
+  z-index: 10; /* Asegura que el texto esté por encima de la imagen */
+}
+
+.blue-text {
+  color: #23abe1;  /* Color turquesa brillante */
+}
+
+
+  
+  /* Footer */
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #111;
+  }
+  
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
