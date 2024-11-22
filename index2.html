@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CodePen Homepage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,16 +15,24 @@
       <img src="img/codepen-wordmark-white.webp" alt="CodePen Logo">
     </div>
     <nav>
+      <div class="nav-header">
+        <span>EXPLORE</span>
+      </div>
       <ul>
         <li><a href="#">Pens</a></li>
         <li><a href="#">Projects</a></li>
         <li><a href="#">Posts</a></li>
         <li><a href="#">Collections</a></li>
-        <li><a href="#" class="spark">Spark <span class="chevron">&#9660;</span></a></li> <!-- Aquí añadimos la clase 'spark' -->
+        <li><a href="#" class="spark">Spark <img src="img/arrow_2.svg" alt="Arrow" class="arrow-icon"></a></li> <!-- Aquí añadimos la clase 'spark' -->
       </ul>
     </nav>
     <div class="auth-buttons">
-      <a href="#" class="create-btn">Create</a>
+      <a href="#" class="create-btn">
+        Create
+        <!-- Imagen SVG de la flecha -->
+        <img src="/img/arrow.svg" alt="Arrow" class="dropdown-arrow">
+      </a>
+      <img src="img/magnifier.svg" alt="Sample Icon" class="auth-icon">
       <a href="#" class="login-btn">Log In</a>
       <a href="#" class="signup-btn">Sign Up</a>
     </div>
@@ -40,16 +50,15 @@
     </div>
     <div class="image-container">
       <div class="overlay-text">This is <span class="blue-text">CodePen Projects</span>!</div>
-      <img src="img/imagen pag.png" alt="CodePen Projects">
+      <img src="img/lmr7a8E.png" alt="CodePen Projects">
     </div>
   </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <a href="#">CodePen for TEAMS</a>
-    <a href="#">CodePen for EDUCATION</a>
-    <a href="#">CodePen for PRIVACY</a>
-    <a href="#">CodePen for WRITING</a>
+    <a href="#" class="footer-link">CodePen for <span class="highlight">TEAMS</span></a>
+    <a href="#" class="footer-link">CodePen for <span class="highlight">EDUCATION</span></a>
+    <a href="#" class="footer-link">CodePen for <span class="highlight">PRIVACY</span></a>
+    <a href="#" class="footer-link">CodePen for <span class="highlight">WRITING</span></a>
   </footer>
-</body>
-</html>
+

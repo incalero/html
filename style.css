@@ -1,3 +1,8 @@
+/* Definición global de la fuente */
+	:root {
+ 	 --cp-font-family: Roboto, Sans-Serif;
+	}
+
 /* Reset básico */
 * {
     margin: 0;
@@ -6,10 +11,11 @@
   }
   
   body {
-    font-family: Arial, sans-serif;
-    background-color: #222;
+    font-family: var(--cp-font-family);
+		background: linear-gradient(to right, #3c3c3c, #151515);
     color: #fff;
     line-height: 1.6;
+		min-height: 100vh;
   }
   
   /* Navbar */
@@ -21,56 +27,119 @@
     background-color: #000;
     width: 100%;
   }
-  
-  .navbar .logo img {
+
+	.navbar .logo img {
     height: 30px;
-    margin-left: 20px;
-  }
-  
-  .navbar nav {
-    display: flex;  /* Asegura que los elementos de navegación estén en línea */
-    gap: 20px; /* Espaciado constante entre los elementos de la lista */
-    margin-left: 20px; /* Margen que separa el logo de la navegación */
   }
 
+	.navbar nav {
+    display: flex;
+		flex-direction: column;
+    gap: 0px;
+    margin-left: 40px;
+	  }
+
+	.nav-header {
+		text-align: left;
+	}
+
+	.nav-header span {
+		font-size: 0.9rem;
+		font-weight: 400px;
+		color: rgb(234, 116, 20);
+	}
+  
   .navbar nav ul li a.spark {
-    font-weight:100; /* Asegura que "Spark" no esté en negrita */
+    font-weight:100;
+		margin-left: 30px;
   }
+
+	.spark img.arrow-icon {
+		margin-left: 8px;
+		width: 16px;
+		height: auto;
+	}
 
   .navbar nav ul {
+		text-align: left;
     list-style-type: none;
     padding: 0;
-    margin: 0;
-    display: flex; /* Alinea los elementos de la lista en línea */
-}
+    display: flex;
+	}
   
   .navbar nav ul li {
-    margin: 0 20px;
+		text-align: left;
   }
+	
+	.navbar nav ul li:not(:first-child) {
+		margin-left: 15px;
+	}
   
   .navbar nav ul li a {
+		text-align: left;
     text-decoration: none;
     color: white;
     font-size: 18px;
     font-weight: bold;
+  }
+
+  .auth-buttons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
   }
   
   .auth-buttons a {
     margin-left: 15px;
     color: #fff;
     text-decoration: none;
-    font-size: 0.9rem;
-    border: 1px solid #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+	}
+
+	.create-btn {
+		display: flex;
+		align-items: center;
+		padding: 10px 20px;
+		background-color: #39ff14;
+		color: #fff;
+		border: none;
+		border-radius: 5px;
+		text-decoration: none;
+		font-size: 1rem;
+	}
+
+	.create-btn .dropdown-arrow {
+		margin-left: 8px;
+  	width: 24px;
+  	height: 24px;
+		filter: invert(36%) sepia(94%) saturate(5000%) hue-rotate(90deg) brightness(120%) contrast(100%);
+	}
+	
+
+  .auth-buttons img.auth-icon {
+    margin-left: 15px; 
+    margin-right: 15px; 
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
   }
   
   .auth-buttons a.create-btn {
-    background-color: #0f0;
+    background-color: rgba(255, 255, 255, 0.264);
   }
   
-  .auth-buttons a.signup-btn {
-    background-color: #007BFF;
+  .auth-buttons a.login-btn {
+    background-color: rgba(255, 255, 255, 0.264);
+  }
+
+	.auth-buttons a.signup-btn {
+    background-color: rgba(255, 255, 255, 0.264);
   }
   
   /* Main Landing Section */
@@ -79,38 +148,50 @@
     justify-content: space-between;
     align-items: center;
     padding: 50px;
+		position: relative;
+    top: -80px;
   }
   
   .content {
     max-width: 50%;
+		font-family: var(--cp-font-family);
   }
   
   .content h1 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+		font-weight:100;
   }
   
   .content h1 .highlight {
-    color: #4caf50;
+    color: white;
+		font-weight: bold;
   }
   
-  .content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-  }
+	.content p {
+		font-weight:300;
+    font-size: 1.9rem;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 20px;
+		color: rgb(170, 170, 170);
+}
   
   .buttons {
     display: flex;
     gap: 20px;
+		width: 40rem;
+		height: 4rem;
   }
   
   .buttons .signup {
-    background-color: #4caf50;
-    color: #fff;
+    background-color: #62df66;
+    color: #000000;
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
+		font-weight:normal;
+		font-size: 1.7rem;
   }
   
   .buttons .signup:hover {
@@ -118,75 +199,101 @@
   }
   
   .buttons .learn-more {
-    background-color: transparent;
-    color: #4caf50;
+    background-color: black;
+    color: #f9fbf9;
     padding: 10px 20px;
-    border: 2px solid #4caf50;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
+		font-size: 1.7rem;
   }
   
   .buttons .learn-more:hover {
-    background-color: #e8f5e9;
-    color: #000;
+    background-color: #3b3b3b;
   }
 
-/* Contenedor de la imagen */
-.image-container {
-  position: relative;  /* Esto es necesario para que el texto se posicione relativo a este contenedor */
-  display: inline-block;
-  float: right; /* Alinea el contenedor de la imagen a la derecha */
-  width: 40%; /* Ajusta el tamaño del contenedor según lo necesites */
-  margin-left: 20px; /* Un pequeño margen a la izquierda para separar de otros elementos */
-  margin-top: 60px;  /* Ajuste para bajar el contenedor hacia abajo */
-}
+	/* Contenedor de la imagen */
+	.image-container {
+		position: relative;
+		display: inline-block;
+		float: right;
+		width: 40%;
+		margin-left: 20px;
+		margin-top: 90px;
+	}
 
-/* Imagen */
-.image-container img {
-  width: 100%;  /* Ajusta la imagen al tamaño del contenedor */
-  height: auto; /* Mantiene la relación de aspecto */
-  border-radius: 5px;
-  margin-top: 40px;
-  box-shadow: -5px 15px 15px rgba(0, 0, 0, 0.5); /* Sombra paralela abajo a la izquierda */
-}
+	/* Imagen */
+	.image-container img {
+		position: relative;
+		width: 100%;
+		height: auto; 
+		border-radius: 5px;
+		margin-top: 40px;
+		box-shadow: -5px 15px 15px rgba(0, 0, 0, 0.5); 
+		z-index: 1;
+	}
 
-/* Texto encima de la imagen */
-.overlay-text {
-  position: absolute; /* Posiciona el texto sobre la imagen */
-  top: 0; /* Ajusta la distancia desde la parte superior de la imagen */
-  left:10px; /* Alinea el texto a la derecha */
-  color: white; /* Color del texto */
-  font-size: 20px; /* Tamaño del texto */
-  font-weight: bold; /* Negrita para el texto */
-  text-align: left; /* Alinea el texto a la derecha */
-  padding: -10px; /* Espaciado alrededor del texto */
-  background-color: transparent;
-  color: white /* Fondo transparente */
-  z-index: 10; /* Asegura que el texto esté por encima de la imagen */
-}
+	/* Texto encima de la imagen */
+	.overlay-text {
+		position: absolute;
+		top: 0;
+		left:10px;
+		color: white;
+		font-size: 20px;
+		font-weight: bold;
+		text-align: left;
+		padding: -10px;
+		background-color: transparent;
+		color: white;
+	}
 
-.blue-text {
-  color: #23abe1;  /* Color turquesa brillante */
-}
+	.blue-text {
+		color: #23abe1;
+	}
 
 
   
   /* Footer */
   .footer {
+		position: relative;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    padding: 10px 0;
-    background-color: #111;
+    background-color: #474747;
+		color: #fff;
+		width: 100%;
+		height: 70px;
+		border-top: 2px solid #ffffff;
+		border-bottom: 2px solid #ffffff;
+		margin-top: -140px;
+		z-index: 10;
   }
   
   .footer a {
     color: #fff;
+		display: inline-block;
     text-decoration: none;
     font-size: 0.9rem;
+		width: 100%;
+		height: 100%;
+  	text-align: center;
+		padding: 20px 20px;
   }
+
+	.footer a .highlight {
+		font-weight: 900;
+		font-size: 1.2rem;
+	}
+
+	.footer a:not(:first-child) {
+		border-left: 2px solid #fff;
+	}
   
   .footer a:hover {
     text-decoration: underline;
   }
+
+	.black_footer {
+		color: #000000;
+		width: 25%;
+		height: 500px;;
+	}
   
